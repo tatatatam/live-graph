@@ -20,7 +20,6 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
         $obj = array('id'=> $row["id"] , 'caller'=> $row['caller'], 'callee'=> $row['callee']);
-        print_r($obj);
         array_push($arr, $obj);
     }
 } else {
